@@ -41,6 +41,16 @@ table.t th{background:#ddd}
 .sol h2{margin:0;font-size:14pt}
 .sol p{margin:0;font-size:12.5pt;line-height:1.35}
 .sol .big{font-weight:700}
+.pic{display:block;flex:none}
+.ph{width:13mm;height:13mm;margin-right:2mm}
+.ht{display:flex;align-items:flex-end}
+.ps{width:10mm;height:10mm;margin-left:auto}
+.pa{width:7mm;height:7mm;flex:none}
+.pl{width:14mm;height:14mm;flex:none}
+.prob h2{display:flex;align-items:center}
+.sol h2{display:flex;align-items:center;justify-content:space-between;gap:2mm}
+.credit{font-size:8pt;line-height:1.25;margin:2mm 0 0;color:#000}
+.screen-only .credit{font-size:11pt}
 @media(max-width:700px){
  .page{width:auto;min-height:0;margin:4px;padding:10px}
  .grid{grid-template-columns:1fr}

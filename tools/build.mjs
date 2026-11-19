@@ -3,8 +3,15 @@ import fs from 'node:fs';
 const dir = new URL('../rooms/', import.meta.url);
 const files = fs.readdirSync(dir).filter(f => /^\d+\.json$/.test(f)).sort();
 const list = []; let bad = 0;
+const cdir = new URL('../assets/img/', import.meta.url);
+const credits = JSON.parse(fs.readFileSync(new URL('credits.json', cdir)));
+for (const [n, c] of Object.entries(credits)) {
+  for (const k of ['file', 'title', 'author', 'source', 'license', 'licenseUrl']) if (!String(c[k] ?? '').trim()) { console.error('credits.json', n, k, '칸이 비었어요'); bad++; }
+  if (c.file && !fs.existsSync(new URL('../' + c.file, import.meta.url))) { console.error('credits.json', n, '파일 없음', c.file); bad++; }
+}
 for (const f of files) {
   const r = JSON.parse(fs.readFileSync(new URL(f, dir)));
+  for (const n of [r.img, ...r.problems.map(p => p.img), r.lock.img].filter(Boolean)) if (!credits[n]) { console.error(f, '그림', n, '이 credits.json 에 없어요'); bad++; }
   const digits = r.problems.map(p => p.digit).join('');
   if (digits !== r.lock.code || digits.length !== r.lock.digits) { console.error(f, '비밀번호 불일치', digits, r.lock.code); bad++; }
   for (const p of r.problems) {

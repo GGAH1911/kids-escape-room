@@ -8,3 +8,7 @@
 1. `rooms/01.json`을 복사해 `rooms/02.json`처럼 새 파일을 만들고 내용을 바꿔요.
 2. `node tools/build.mjs`를 실행해요. 비밀번호와 거짓말 문제 해를 검사하고 `rooms/index.json`을 갱신해요.
 3. 커밋하고 push하면 첫 화면에 새 회차가 나와요.
+
+## 그림 출처
+그림은 https://game-icons.net 의 아이콘이에요 (CC BY 3.0). 작가 표기와 출처 주소는 `assets/img/credits.json`에 있고, 각 문제지·정답지 맨 아래에도 자동으로 표시돼요.
+새 그림을 쓰려면 SVG를 `assets/img/`에 저장하고 `credits.json`에 파일·작가·출처·라이선스를 적은 뒤, 회차 JSON의 `img`(표지), 문제의 `img`, `lock.img`에 이름을 넣어요. 빠진 칸이 있으면 `node tools/build.mjs`가 실패해요.

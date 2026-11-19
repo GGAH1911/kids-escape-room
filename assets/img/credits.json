@@ -1,0 +1,52 @@
+{
+  "stone-tower": {
+    "file": "assets/img/stone-tower.svg",
+    "title": "Stone tower",
+    "author": "Lorc",
+    "authorUrl": "https://lorcblog.blogspot.com",
+    "source": "https://game-icons.net/1x1/lorc/stone-tower.html",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+    "modified": false
+  },
+  "potion-ball": {
+    "file": "assets/img/potion-ball.svg",
+    "title": "Potion ball",
+    "author": "Lorc",
+    "authorUrl": "https://lorcblog.blogspot.com",
+    "source": "https://game-icons.net/1x1/lorc/potion-ball.html",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+    "modified": false
+  },
+  "pointy-hat": {
+    "file": "assets/img/pointy-hat.svg",
+    "title": "Pointy hat",
+    "author": "Lorc",
+    "authorUrl": "https://lorcblog.blogspot.com",
+    "source": "https://game-icons.net/1x1/lorc/pointy-hat.html",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+    "modified": false
+  },
+  "scroll-unfurled": {
+    "file": "assets/img/scroll-unfurled.svg",
+    "title": "Scroll unfurled",
+    "author": "Lorc",
+    "authorUrl": "https://lorcblog.blogspot.com",
+    "source": "https://game-icons.net/1x1/lorc/scroll-unfurled.html",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+    "modified": false
+  },
+  "padlock": {
+    "file": "assets/img/padlock.svg",
+    "title": "Padlock",
+    "author": "Lorc",
+    "authorUrl": "https://lorcblog.blogspot.com",
+    "source": "https://game-icons.net/1x1/lorc/padlock.html",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+    "modified": false
+  }
+}
