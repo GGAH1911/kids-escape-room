@@ -48,5 +48,205 @@
     "license": "CC BY 3.0",
     "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
     "modified": false
+  },
+  "factory": {
+    "file": "assets/img/factory.svg",
+    "title": "Factory",
+    "author": "Delapouite",
+    "authorUrl": "https://delapouite.com",
+    "source": "https://game-icons.net/1x1/delapouite/factory.html",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+    "modified": false
+  },
+  "cog": {
+    "file": "assets/img/cog.svg",
+    "title": "Cog",
+    "author": "Lorc",
+    "authorUrl": "https://lorcblog.blogspot.com",
+    "source": "https://game-icons.net/1x1/lorc/cog.html",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+    "modified": false
+  },
+  "wrapped-sweet": {
+    "file": "assets/img/wrapped-sweet.svg",
+    "title": "Wrapped sweet",
+    "author": "Lorc",
+    "authorUrl": "https://lorcblog.blogspot.com",
+    "source": "https://game-icons.net/1x1/lorc/wrapped-sweet.html",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+    "modified": false
+  },
+  "cookie": {
+    "file": "assets/img/cookie.svg",
+    "title": "Cookie",
+    "author": "Delapouite",
+    "authorUrl": "https://delapouite.com",
+    "source": "https://game-icons.net/1x1/delapouite/cookie.html",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+    "modified": false
+  },
+  "egyptian-pyramids": {
+    "file": "assets/img/egyptian-pyramids.svg",
+    "title": "Egyptian pyramids",
+    "author": "Delapouite",
+    "authorUrl": "https://delapouite.com",
+    "source": "https://game-icons.net/1x1/delapouite/egyptian-pyramids.html",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+    "modified": false
+  },
+  "scarab-beetle": {
+    "file": "assets/img/scarab-beetle.svg",
+    "title": "Scarab beetle",
+    "author": "Lorc",
+    "authorUrl": "https://lorcblog.blogspot.com",
+    "source": "https://game-icons.net/1x1/lorc/scarab-beetle.html",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+    "modified": false
+  },
+  "camel": {
+    "file": "assets/img/camel.svg",
+    "title": "Camel",
+    "author": "Delapouite",
+    "authorUrl": "https://delapouite.com",
+    "source": "https://game-icons.net/1x1/delapouite/camel.html",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+    "modified": false
+  },
+  "treasure-map": {
+    "file": "assets/img/treasure-map.svg",
+    "title": "Treasure map",
+    "author": "Lorc",
+    "authorUrl": "https://lorcblog.blogspot.com",
+    "source": "https://game-icons.net/1x1/lorc/treasure-map.html",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+    "modified": false
+  },
+  "castle": {
+    "file": "assets/img/castle.svg",
+    "title": "Castle",
+    "author": "Delapouite",
+    "authorUrl": "https://delapouite.com",
+    "source": "https://game-icons.net/1x1/delapouite/castle.html",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+    "modified": false
+  },
+  "snowflake-1": {
+    "file": "assets/img/snowflake-1.svg",
+    "title": "Snowflake 1",
+    "author": "Lorc",
+    "authorUrl": "https://lorcblog.blogspot.com",
+    "source": "https://game-icons.net/1x1/lorc/snowflake-1.html",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+    "modified": false
+  },
+  "ice-cube": {
+    "file": "assets/img/ice-cube.svg",
+    "title": "Ice cube",
+    "author": "Lorc",
+    "authorUrl": "https://lorcblog.blogspot.com",
+    "source": "https://game-icons.net/1x1/lorc/ice-cube.html",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+    "modified": false
+  },
+  "frozen-block": {
+    "file": "assets/img/frozen-block.svg",
+    "title": "Frozen block",
+    "author": "Lorc",
+    "authorUrl": "https://lorcblog.blogspot.com",
+    "source": "https://game-icons.net/1x1/lorc/frozen-block.html",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+    "modified": false
+  },
+  "magnifying-glass": {
+    "file": "assets/img/magnifying-glass.svg",
+    "title": "Magnifying glass",
+    "author": "Lorc",
+    "authorUrl": "https://lorcblog.blogspot.com",
+    "source": "https://game-icons.net/1x1/lorc/magnifying-glass.html",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+    "modified": false
+  },
+  "footprint": {
+    "file": "assets/img/footprint.svg",
+    "title": "Footprint",
+    "author": "Lorc",
+    "authorUrl": "https://lorcblog.blogspot.com",
+    "source": "https://game-icons.net/1x1/lorc/footprint.html",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+    "modified": false
+  },
+  "key": {
+    "file": "assets/img/key.svg",
+    "title": "Key",
+    "author": "Lorc",
+    "authorUrl": "https://lorcblog.blogspot.com",
+    "source": "https://game-icons.net/1x1/lorc/key.html",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+    "modified": false
+  },
+  "flashlight": {
+    "file": "assets/img/flashlight.svg",
+    "title": "Flashlight",
+    "author": "Delapouite",
+    "authorUrl": "https://delapouite.com",
+    "source": "https://game-icons.net/1x1/delapouite/flashlight.html",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+    "modified": false
+  },
+  "owl": {
+    "file": "assets/img/owl.svg",
+    "title": "Owl",
+    "author": "Lorc",
+    "authorUrl": "https://lorcblog.blogspot.com",
+    "source": "https://game-icons.net/1x1/lorc/owl.html",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+    "modified": false
+  },
+  "lion": {
+    "file": "assets/img/lion.svg",
+    "title": "Lion",
+    "author": "Lorc",
+    "authorUrl": "https://lorcblog.blogspot.com",
+    "source": "https://game-icons.net/1x1/lorc/lion.html",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+    "modified": false
+  },
+  "monkey": {
+    "file": "assets/img/monkey.svg",
+    "title": "Monkey",
+    "author": "Lorc",
+    "authorUrl": "https://lorcblog.blogspot.com",
+    "source": "https://game-icons.net/1x1/lorc/monkey.html",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+    "modified": false
+  },
+  "elephant": {
+    "file": "assets/img/elephant.svg",
+    "title": "Elephant",
+    "author": "Delapouite",
+    "authorUrl": "https://delapouite.com",
+    "source": "https://game-icons.net/1x1/delapouite/elephant.html",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+    "modified": false
   }
 }
