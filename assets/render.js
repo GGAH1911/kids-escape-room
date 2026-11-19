@@ -9,12 +9,12 @@ const SHAPES = {
 };
 const svg = k => `<svg viewBox="0 0 24 24" aria-hidden="true">${SHAPES[k]}</svg>`;
 export async function loadRoom(id) {
-  const r = await fetch(`rooms/${encodeURIComponent(id)}.json`);
+  const r = await fetch(`rooms/${encodeURIComponent(id)}.json`, { cache: 'no-cache' });
   if (!r.ok) throw new Error('회차를 찾을 수 없어요');
   return r.json();
 }
 let CREDITS = null;
-export async function loadCredits() { return CREDITS ??= await (await fetch('assets/img/credits.json')).json(); }
+export async function loadCredits() { return CREDITS ??= await (await fetch('assets/img/credits.json', { cache: 'no-cache' })).json(); }
 const pic = (name, cls) => name ? `<img class="pic ${cls}" src="assets/img/${esc(name)}.svg" alt="">` : '';
 export const roomImgs = r => [r.img, ...r.problems.map(p => p.img), r.lock.img].filter(Boolean);
 function creditsHtml(names, cr) {
@@ -22,16 +22,16 @@ function creditsHtml(names, cr) {
   for (const n of new Set(names)) { const c = cr[n]; if (!c) continue; if (!by.has(c.author)) by.set(c.author, []); by.get(c.author).push(c); }
   return [...by].map(([a, cs]) => `Icons made by ${esc(a)}. Available on https://game-icons.net (${esc(cs[0].license)}: ${cs.map(c => esc(c.title) + (c.modified ? ', 색을 바꿈' : '')).join(', ')})`).join(' / ');
 }
-export async function loadIndex() { return (await fetch('rooms/index.json')).json(); }
+export async function loadIndex() { return (await fetch('rooms/index.json', { cache: 'no-cache' })).json(); }
 export function getId() { return new URLSearchParams(location.search).get('id') || '01'; }
 function problemSheet(p, i) {
   let h = `<section class="prob"><h2><span class="no">${i + 1}</span><span class="tt">${esc(p.title)}</span>${pic(p.img, 'ps')}</h2><p>${esc(p.text)}</p>`;
-  if (p.table) h += `<table class="t"><tr>${p.table.head.map(x => `<th>${esc(x)}</th>`).join('')}</tr>${p.table.rows.map(r => `<tr>${r.map(x => `<td>${esc(x)}</td>`).join('')}</tr>`).join('')}</table>`;
+  if (p.table) h += `<table class="t"><tr>${p.table.head.map(x => `<th>${esc(x)}</th>`).join('')}</tr>${p.table.rows.map(r => `<tr>${r.map((x, j) => (p.table.rowHead && j === 0) ? `<th>${esc(x)}</th>` : `<td>${esc(x)}</td>`).join('')}</tr>`).join('')}</table>`;
   if (p.statements) h += `<ul class="say">${p.statements.map(s => `<li><b>${esc(s[0])}</b>: "${esc(s[1])}"</li>`).join('')}</ul>`;
   if (p.riddle) h += `<p class="key">${esc(p.riddle)}</p>`;
   if (p.symbols) h += `<div class="syms">${p.symbols.map(s => `<div>${svg(s.shape)}<span>${esc(s.name)} = <b>${s.value}</b></span></div>`).join('')}</div>`;
   h += `<p class="q">${esc(p.question)}</p><div class="ans">${esc(p.answerLabel)}:<span class="blank"></span></div>`;
-  return h + `<p class="rule">열쇠 숫자: ${esc(p.digitRule)}</p></section>`;
+  return h + `${p.digit === Number(p.answer) ? '' : `<p class="rule">열쇠 숫자: ${esc(p.digitRule)}</p>`}</section>`;
 }
 export async function renderSheet(room) {
   const cr = await loadCredits();
@@ -41,7 +41,7 @@ export async function renderSheet(room) {
   <main class="page"><h1><span class="ht">${pic(room.img, 'ph')}${esc(room.title)}</span><small>이름: ________ 시간: ____분</small></h1>
   <p class="story">${esc(room.story)}</p>
   <div class="grid">${room.problems.map(problemSheet).join('')}</div>
-  <div class="lock">${pic(room.lock.img, 'pl')}<div class="lbl">마지막 자물쇠<br>${esc(room.lock.label)}</div><div class="cells">${cells}</div></div><p class="credit">${creditsHtml(roomImgs(room), cr)}</p></main>`;
+  <div class="lock">${pic(room.lock.img, 'pl')}<div class="lbl">마지막 자물쇠<br>${esc(room.lock.label)}${room.problems.some(p => p.digit === Number(p.answer)) ? '<br><small class="note">(설명이 없으면 답이 열쇠 숫자예요.)</small>' : ''}</div><div class="cells">${cells}</div></div><p class="credit">${creditsHtml(roomImgs(room), cr)}</p></main>`;
 }
 export async function renderAnswer(room) {
   const cr = await loadCredits();

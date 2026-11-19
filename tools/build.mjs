@@ -1,5 +1,6 @@
 // 사용법: node tools/build.mjs  -> rooms/*.json 을 검사하고 rooms/index.json 을 만든다.
 import fs from 'node:fs';
+import crypto from 'node:crypto';
 const dir = new URL('../rooms/', import.meta.url);
 const files = fs.readdirSync(dir).filter(f => /^\d+\.json$/.test(f)).sort();
 const list = []; let bad = 0;
@@ -28,4 +29,14 @@ for (const f of files) {
 }
 fs.writeFileSync(new URL('index.json', dir), JSON.stringify(list, null, 2) + '\n');
 console.log('회차', list.length, '개, 오류', bad);
+
+// 캐시 방지: render.js·style.css 내용 해시를 HTML 의 ?v= 에 적는다 (파일이 바뀌면 주소도 바뀜).
+const h = crypto.createHash('sha1');
+for (const f of ['assets/render.js', 'assets/style.css']) h.update(fs.readFileSync(new URL('../' + f, import.meta.url)));
+const v = h.digest('hex').slice(0, 8);
+for (const n of ['index', 'sheet', 'answer']) {
+  const u = new URL(`../${n}.html`, import.meta.url);
+  fs.writeFileSync(u, fs.readFileSync(u, 'utf8').replace(/(assets\/(?:style\.css|render\.js))\?v=\w+/g, `$1?v=${v}`));
+}
+console.log('빌드 버전', v);
 process.exit(bad ? 1 : 0);

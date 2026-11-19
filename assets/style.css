@@ -8,8 +8,8 @@ body{margin:0;font-family:"Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",s
 .page h1{margin:0 0 2mm;font-size:22pt;border-bottom:3px double #000;padding-bottom:1mm;display:flex;justify-content:space-between;align-items:flex-end}
 .page h1 small{font-size:14pt;font-weight:400}
 .story{margin:0 0 3mm;font-size:14pt;border:2px solid #000;border-radius:6px;padding:2mm 3mm}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:3mm}
-.prob{border:2px solid #000;border-radius:8px;padding:2mm 3mm;break-inside:avoid;display:flex;flex-direction:column}
+.grid{display:block;columns:2;column-gap:3mm}
+.prob{border:2px solid #000;border-radius:8px;padding:2mm 3mm;break-inside:avoid;display:flex;flex-direction:column;margin:0 0 3mm}
 .prob h2{margin:0 0 1mm;font-size:15pt}
 .prob h2 .no{display:inline-block;min-width:8mm;text-align:center;background:#000;color:#fff;border-radius:50%;margin-right:2mm}
 .prob p{margin:0 0 1mm}
@@ -22,6 +22,7 @@ table.t th{background:#ddd}
 .say b{border-bottom:2px solid #000}
 .ans{margin-top:auto;display:flex;align-items:center;gap:2mm;font-weight:700;font-size:14pt}
 .ans .blank{flex:1;border:2px solid #000;border-radius:6px;height:11mm}
+.lock .note{font-weight:400;font-size:14pt}
 .rule{font-size:14pt;margin:0 0 1mm}
 .syms{display:grid;grid-template-columns:1fr 1fr;gap:1mm 3mm;margin:1mm 0 2mm}
 .syms div{display:flex;align-items:center;gap:1.5mm;border:2px solid #000;border-radius:6px;padding:0 1.5mm;white-space:nowrap}
@@ -29,7 +30,7 @@ table.t th{background:#ddd}
 .lock{margin-top:3mm;border:3px solid #000;border-radius:10px;padding:2mm 4mm;display:flex;align-items:center;gap:4mm;break-inside:avoid}
 .lock .lbl{flex:1;font-weight:700}
 .lock .cells{display:flex;gap:3mm}
-.lock .cell{width:16mm;height:18mm;border:3px solid #000;border-radius:6px;text-align:center;font-size:24pt;font-weight:700;line-height:18mm}
+.lock .cell{width:15mm;height:17mm;border:3px solid #000;border-radius:6px;text-align:center;font-size:24pt;font-weight:700;line-height:18mm}
 .lock .cell small{display:block}
 .cell.fill{background:#fff}
 .list{list-style:none;padding:0}
@@ -51,18 +52,26 @@ table.t th{background:#ddd}
 .sol h2{display:flex;align-items:center;justify-content:space-between;gap:2mm}
 .credit{font-size:8pt;line-height:1.25;margin:2mm 0 0;color:#000}
 .screen-only .credit{font-size:11pt}
-@media(max-width:700px){
+@media screen and (max-width:700px){
  .page{width:auto;min-height:0;margin:4px;padding:10px}
- .grid{grid-template-columns:1fr}
+ .grid{columns:1}
  .lock{flex-direction:column;align-items:stretch}
  .lock .cells{justify-content:center}
  .page h1{font-size:18pt;flex-direction:column;align-items:flex-start}
 }
-@page{size:A4;margin:12mm}
+@page{size:A4;margin:15mm}
 @media print{
  body{background:#fff;font-size:14pt;-webkit-print-color-adjust:exact;print-color-adjust:exact}
  .screen-only{display:none!important}
- .page{width:auto;min-height:0;margin:0;padding:0;box-shadow:none;height:273mm;overflow:hidden}
- .grid{grid-template-columns:1fr 1fr!important}
+ .page{width:auto;min-height:0;margin:0;padding:0;box-shadow:none;height:auto;overflow:visible}
+ .grid{column-gap:2mm!important}
+ .prob{margin-bottom:2mm!important}
+ .story{margin-bottom:2mm}
+ .prob{padding:1.5mm 3mm}
+ .lock{margin-top:2mm}
+ body{line-height:1.3}
+ .ans .blank{height:10mm}
+ .prob h2{font-size:14pt}
+ table.t th,table.t td{padding:0 1mm}
  .lock{flex-direction:row!important}
 }
